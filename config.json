@@ -1,0 +1,41 @@
+{
+    "model" : {
+        "min_input_size":       180,
+        "max_input_size":       320,
+        "anchors":              [4,9, 7,25, 11,13, 14,55, 20,25, 36,44, 56,84, 96,128, 139,219],
+        "labels":               ["bike","bus","car","motor","person","rider","traffic light","traffic sign","train","truck"]
+        
+    },
+
+  "train": {
+    "train_image_folder": "/home/dbhosal/FinalProject/Images/train/",
+    "train_annot_folder": "/home/dbhosal/FinalProject/Labels/xml/train/",
+    "cache_name": "all_train.pkl",
+
+    "train_times": 1,
+    "batch_size": 16,
+    "learning_rate": 3e-4,
+    "nb_epochs": 37,
+    "warmup_epochs": 3,
+    "ignore_thresh": 0.7,
+    "gpus": "1",
+
+    "grid_scales": [ 1, 1, 0.05 ],
+    "obj_scale": 5,
+    "noobj_scale": 1,
+    "xywh_scale": 1,
+    "class_scale": 1,
+
+    "tensorboard_dir": "logs",
+    "saved_weights_name": "all.h5",
+    "debug": false
+  },
+
+  "valid": {
+    "valid_image_folder": "/home/dbhosal/FinalProject/Images/val/",
+    "valid_annot_folder": "/home/dbhosal/FinalProject/Labels/xml/val/",
+    "cache_name": "all_valid.pkl",
+
+    "valid_times": 1
+  }
+}
