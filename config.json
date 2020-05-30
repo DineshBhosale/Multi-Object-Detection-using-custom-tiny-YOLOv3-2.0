@@ -3,14 +3,14 @@
         "min_input_size":       180,
         "max_input_size":       320,
         "anchors":              [4,9, 7,25, 11,13, 14,55, 20,25, 36,44, 56,84, 96,128, 139,219],
-        "labels":               ["bike","bus","car","motor","person","rider","traffic light","traffic sign","train","truck"]
+        "labels":               ["car","person","traffic light","traffic sign"]
         
     },
 
   "train": {
     "train_image_folder": "/home/dbhosal/FinalProject/Images/train/",
     "train_annot_folder": "/home/dbhosal/FinalProject/Labels/xml/train/",
-    "cache_name": "all_train.pkl",
+    "cache_name": "car_person_sign_train.pkl",
 
     "train_times": 1,
     "batch_size": 16,
@@ -27,14 +27,14 @@
     "class_scale": 1,
 
     "tensorboard_dir": "logs",
-    "saved_weights_name": "all.h5",
+    "saved_weights_name": "car_person_sign.h5",
     "debug": false
   },
 
   "valid": {
     "valid_image_folder": "/home/dbhosal/FinalProject/Images/val/",
     "valid_annot_folder": "/home/dbhosal/FinalProject/Labels/xml/val/",
-    "cache_name": "all_valid.pkl",
+    "cache_name": "car_person_sign_valid.pkl",
 
     "valid_times": 1
   }
